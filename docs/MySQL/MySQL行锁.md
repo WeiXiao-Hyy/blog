@@ -1,5 +1,7 @@
 ## 引言
 
+TODO: 待补充
+
 ## MySQL行级锁
 
 行级锁（Row-Level-Locking）是InnoDB引擎特有的特性
