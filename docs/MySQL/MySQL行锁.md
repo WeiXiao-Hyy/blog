@@ -1,6 +1,8 @@
 ## 引言
 
-TODO: 待补充
+本文是对MySQL行级锁的学习，MySQL一直停留在会用的阶段，需要弄清楚锁和事务的原理并DEBUG查看。
+
+PS:本文涉及到的表结构均可从[https://github.com/WeiXiao-Hyy/blog](https://github.com/WeiXiao-Hyy/blog)中获取，欢迎Star！
 
 ## MySQL行级锁
 
@@ -65,9 +67,20 @@ mysql> select * from t1;
 >
 
 - select * from t1 where id <= 3 for update; -> LOCK_MODE: X(临键锁), (-∞,3]
+
+![聚簇索引-记录存在%3C=](./imgs/聚簇索引-记录存在%3C=.png)
+
 - select * from t1 where id < 3 for update; -> LOCK_MODE: X,GAP(间隔锁), (-∞,3)
+
+![聚簇索引-记录存在%3C](./imgs/聚簇索引-记录存在%3C.png)
+
 - select * from t1 where id = 3 for update; -> LOCK_MODE: X,REC_NOT_GAP(记录锁), [3,3]
+
+![聚簇索引-记录存在=](./imgs/聚簇索引-记录存在=.png)
+
 - select * from t1 where id <= 3 for share; -> LOCK_MODE: S,REC_NOT_GAP(共享锁)
+
+![聚簇索引-记录存在-forshare](./imgs/聚簇索引-记录存在-forshare.png)
 
 > 记录不存在
 >
@@ -75,17 +88,25 @@ mysql> select * from t1;
 
 由于id=7会落在(6,9]这个区间，但是查询条件没有9，因此退化为间隔锁，锁的范围为(6，9)
 
+![](./imgs/聚簇索引-记录不存在1.png)
+
 - select * from t1 where id = 10 for update;
 
 由于上边界索引key值不存在的时候，锁为临键锁，锁的范围为(9, +∞) LOCK_DATA=`supremum pseudo-record`
+
+![](./imgs/聚簇索引-记录不存在2.png)
 
 - select * from t1 where id <= 4 for update;
 
 命中了两个临键区(-∞,3]和(3,5], 第一个临键区不会退化，所以会加上一个上界=3的临键锁，对于第二个临键区，查询条件中不包含5，所有退化为间隔锁(3,5)
 
+![](./imgs/聚簇索引-记录不存在3.png)
+
 - select * from t1 where id > 6 and id ≤ 9 for update;
 
 刚刚好命中(6,9]临键区，但实际上会添加上一个最大索引记录值LOCK_DATA=`supremum pseudo-record` 原因当扫描到9(最大索引值)之后，还会继续向后扫描。即为(6,9]+(9,+∞)
+
+![](./imgs/聚簇索引-记录不存在4.png)
 
 ### 二级唯一索引
 
