@@ -114,10 +114,6 @@ mysql> select * from t1;
 
 **非聚簇唯一索引范围查询：InnoDB存储引擎使用临键锁搜索数据，会搜索到下一个不满足条件的索引KEY，如果进入到下一个临键区，则会将下一个临键区加上临键锁（任何时候都不会退化，这跟主键索引是不同的）**
 
-```sql
-select * from t1 order by id_nbr;
-```
-
 - select * from t1 where id_nbr <= '110101190007287516' for update;
 
 ![](./imgs/二级唯一索引%3C=.png)
