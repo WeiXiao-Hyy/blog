@@ -95,11 +95,6 @@ mysql> select * from t1;
 
 ```sql
 select * from t1 order by id_nbr;
-
-9,王朗,110101190007287516,122
-6,曹操,110101191807288714,95
-3,刘备,110101193007282815,93
-5,孙权,110101194007281016,93
 ```
 
 - select * from t1 where id_nbr <= '110101190007287516' for update;
@@ -162,5 +157,7 @@ SELECT OBJECT_SCHEMA, OBJECT_NAME, INDEX_NAME, LOCK_TYPE, LOCK_MODE, LOCK_STATUS
 
 ## 参考资料
 
-- https://juejin.cn/post/7260059106765307961
--
+- [https://juejin.cn/post/7260059106765307961](https://juejin.cn/post/7260059106765307961)
+- [https://book.douban.com/subject/35231266/](https://book.douban.com/subject/35231266/)
+- [https://juejin.cn/post/7260070602613456957](https://juejin.cn/post/7260070602613456957)
+- [https://juejin.cn/post/7170707711208718344](https://juejin.cn/post/7170707711208718344)

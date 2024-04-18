@@ -125,7 +125,7 @@ MySQL设计：在执行DML的时候，同时给表加上一个意向锁，如果
 
 ### DML所加的意向锁都是IX锁(意向排他锁)
 
-执行`select * from t1 where id < '110101190007287516' for updaet;`后观察，锁的情况；
+执行`select * from t1 where id < '110101190007287516' for update;`后观察，锁的情况；
 
 ![](./imgs/select-for-update-IX.png)
 
