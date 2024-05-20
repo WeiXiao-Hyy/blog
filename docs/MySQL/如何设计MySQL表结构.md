@@ -2,7 +2,9 @@
 
 学习数据库设计范式以及设计数据表的经验总结
 
-## 三大范式
+## 六大范式
+
+关系数据库有六种，一二三四五和BCNF。一般数据库只需要满足第三范式即可;
 
 ### 第一范式
 
@@ -51,7 +53,7 @@ department: id, name, boss
 student: id, name, sex, height, department_id
 ```
 
-### 巴斯-科德范式与第四，五范式
+### 巴斯-科德范式(BCNF)
 
 第三范式：任何非主键字段不能与其他非主键字段间存在依赖关系。
 
@@ -95,7 +97,7 @@ student: class_id, name, sex, height
 
 > 多值依赖
 
-一个表至少需要三个独立的字段才会出现多值依赖问题，指表中的字段之间存在一对多的关系，也就是一个字段的具体值会由多个字段来决定。
+一个表至少需要三个独立的字段才会出现多值依赖问题，指表中的字段之间存在多个一对多的关系，也就是一个字段的具体值会由多个字段来决定。
 
 ```sql
 user_role_permission: name, sex, role, permission
@@ -117,7 +119,28 @@ user_roles: id, user_id, role_id;
 roles_permissions: id, role_id, permission_id;
 ```
 
+### 第五范式(完美范式)
+
+在第四范式的基础上，进一步消除表中的连接依赖，直到表中的连接依赖都是主键所蕴含的。
+
+```sql
+emp: empname(名称), empskill(技能), empjob(工作)
+```
+
+上表可以拆分为以下三个表，因此不符合第五范式
+
+```sql
+emp_skill: name, skill
+
+emp_job: name, job
+
+job_skill: skill, job
+```
+
+简单理解为A-B-C可以拆分为A-B,A-C,B-C三个关系时，则不符合第五范式。
+
 ## 参考资料
 
 - [https://juejin.cn/post/7146474739018498062](https://juejin.cn/post/7146474739018498062)
 - [https://www.liaoxuefeng.com/wiki/1177760294764384/1218728391867808](https://www.liaoxuefeng.com/wiki/1177760294764384/1218728391867808)
+- [https://www.nhooo.com/note/qa0mvl.html](https://www.nhooo.com/note/qa0mvl.html)
