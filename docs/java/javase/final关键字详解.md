@@ -14,7 +14,27 @@ private方法是隐式的final，final方法是可以重载的。
 
 ### 修饰参数
 
-将参数列表中的参数申明为final，意味着无法在方法中更改参数引用所指向的对象。
+将参数列表中的参数申明为final，意味着无法在方法中更改参数引用所指向的对象。常常用在匿名内部类中。
+
+```java
+interface GreetingService {
+    void greet(String message);
+}
+
+public void executeGreeting(final String name) {
+    GreetingService service = new GreetingService() {
+        @Override
+        public void greet(String message) {
+            name = "hello"; // 报错
+            System.out.println(message + " " + name);
+        }
+    };
+
+    service.greet("Hello");
+}
+```
+
+注意从Java8开始，即使局部变量和参数没有显式地被声明为final，只要它们实际上没有被修改，就可以在匿名内部类或lambda表达式中使用。
 
 ### 修饰变量
 
