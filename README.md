@@ -4,6 +4,10 @@
 
 ## Java
 
+### 基础篇
+
+- [一文带你搞懂final关键字](https://juejin.cn/post/7374055681890238499)
+
 ### Java并发编程
 
 - [fucking-java-concurrency解读](https://juejin.cn/post/7371671537509187596)
