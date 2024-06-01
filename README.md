@@ -42,9 +42,10 @@
 - [MySQL表级锁——技术深度+1](https://juejin.cn/spost/7358822246649856041)
 - [MySQL行级锁——技术深度+1](https://juejin.cn/post/7359084330121379852)
 
-## Spring
+## 事务相关
 
 - [Spring事务篇](https://juejin.cn/post/7370803622412501004)
+- [一文带你搞懂大事务的前因后果](https://juejin.cn/spost/7375004154881916943)
 
 ## 架构思考
 
