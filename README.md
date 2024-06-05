@@ -61,6 +61,10 @@
 - [阅读笔记——《代码整洁之道》ch3](https://juejin.cn/post/7369110440242774028)
 - [阅读笔记——《代码整洁之道》ch4](https://juejin.cn/post/7369435074759196711)
 
+### 英文阅读
+
+- [英文阅读-LinkedIn‘s Tips for Highly Effective Code Review](https://juejin.cn/post/7348261190102089740)
+
 ## 极客时间
 
 - [极客时间-读多写少型缓存设计](https://juejin.cn/post/7348320601998098471)
