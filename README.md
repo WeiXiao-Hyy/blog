@@ -11,6 +11,7 @@
 ### Java并发编程
 
 - [fucking-java-concurrency解读](https://juejin.cn/post/7371671537509187596)
+- [你真的懂Java延迟初始化吗？](https://juejin.cn/spost/7377191678862508069)
 
 ## CSAPP篇
 
