@@ -101,7 +101,7 @@ ctorInstance(memory);//2：初始化对象
 instance = memory;   //3：设置instance指向刚分配的内存地址
 ```
 
-上面操作2依赖于操作1，但操作并不依赖操作2，所有可能出现如下执行顺序：
+上面操作2依赖于操作1，但操作3并不依赖操作2，所有可能出现如下执行顺序：
 
 ```java
 memory = allocate();   //1：分配对象的内存空间 
@@ -136,7 +136,7 @@ public void registerListener(String groupName, String serviceName, String cluste
 }
 ```
 
-当然上述主要是由于"先查询后执行"这种方式导致的线程并发错误。也可以使用map.putIfAbsent()来代替双重检查锁的写法。
+当然上述主要是为了防止"先查询后执行"这种方式导致的并发错误。也可以使用map.putIfAbsent()来代替双重检查锁的写法。
 
 ```java
 private final Map<String, ConcurrentHashSet<EventListener>> listenerMap = new ConcurrentHashMap<String, ConcurrentHashSet<EventListener>>();
