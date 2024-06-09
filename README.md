@@ -12,6 +12,7 @@
 
 - [fucking-java-concurrency解读](https://juejin.cn/post/7371671537509187596)
 - [你真的懂Java延迟初始化吗？](https://juejin.cn/spost/7377191678862508069)
+- [以操作系统和Java视角来看“中断”](https://juejin.cn/post/7377691088155623439)
 
 ## CSAPP篇
 
