@@ -4,9 +4,7 @@
 
 PS: [https://github.com/WeiXiao-Hyy/blog](https://github.com/WeiXiao-Hyy/blog)整理了后端开发的知识网络，欢迎Star！
 
-## 中断概述
-
-### 操作系统的中断
+## 操作系统的中断
 
 > 什么是中断？
 
