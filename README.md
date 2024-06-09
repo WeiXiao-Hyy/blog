@@ -65,7 +65,8 @@
 
 ### 英文阅读
 
-- [英文阅读-LinkedIn‘s Tips for Highly Effective Code Review](https://juejin.cn/post/7348261190102089740)
+- [LinkedIn‘s Tips for Highly Effective Code Review](https://juejin.cn/post/7348261190102089740)
+- [Maker's Schedule, Manager's Schedule](https://paulgraham.com/makersschedule.html)
 
 ## 极客时间
 
