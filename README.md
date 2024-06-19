@@ -49,6 +49,10 @@
 - [Spring事务篇](https://juejin.cn/post/7370803622412501004)
 - [一文带你搞懂大事务的前因后果](https://juejin.cn/spost/7375004154881916943)
 
+## DevOps
+
+- [Feature-Toggles（特征开关）在项目中的应用](https://juejin.cn/post/7381781951425249292)
+
 ## 架构思考
 
 - [MQ最终一致性理论与实践](https://juejin.cn/post/7348363812948869159)
@@ -67,6 +71,7 @@
 
 - [LinkedIn‘s Tips for Highly Effective Code Review](https://juejin.cn/post/7348261190102089740)
 - [Maker's Schedule, Manager's Schedule](https://paulgraham.com/makersschedule.html)
+- [feature-toggles](https://martinfowler.com/articles/feature-toggles.html)
 
 ## 极客时间
 
