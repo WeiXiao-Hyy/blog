@@ -1,6 +1,8 @@
 # blog
 
-:smirk: 整理所有在CSDN，掘金，知乎的技术博客
+整理北邮21渣硕Java后端开发知识网络，阅读笔记以及技术博客，持续更新！欢迎Star！
+
+GitHub: [https://github.com/WeiXiao-Hyy/blog](https://link.zhihu.com/?target=https%3A//github.com/WeiXiao-Hyy/blog)
 
 ## Java
 
