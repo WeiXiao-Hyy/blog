@@ -1,0 +1,20 @@
+var foo = "method(" + argument1 + "," + argument2 + ")";
+
+// daw 删除整个单词
+
+// <C-a> 和 <C-x> 分别对数字进行加或减操作。
+20 + 14 = 20
+
+// cw 删除当前单词并切换到插入模式
+// 180<C-x> 找到第一个数字并将其减180
+.blog, .news { background-image: url(/sprite.png); }
+.blog { background-position: 0px 0px }
+.news { background-position: -180px 0px }
+
+// dw. > 2dw
+Delete more than one word;
+
+// 3cw > dw.
+I have a couple of questions;
+
+// dl, daw, dap, gU转换为大写, gu转换为小写, >>缩进当前行
